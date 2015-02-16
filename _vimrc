@@ -1,5 +1,6 @@
 set splitright
-set dir=c:\\NoSave\tmp
+" set dir=c:\\NoSave\tmp
+set dir=/tmp
 execute pathogen#infect()
 syntax on
 colorscheme koehler
@@ -55,5 +56,7 @@ nnoremap <Leader>r {V}gq
 nnoremap <silent> <leader>f :FufFile doci:<CR>
 nnoremap <silent> <leader>b :FufBuffer<CR>
 let g:fuf_abbrevMap = { "^doci:" : [ "~/Documents/DocsInternes/**/", ], }
+
+let g:rainbow_active = 1
 
 com! DeleteFile call delete(expand('%')) | bd!
