@@ -1,13 +1,18 @@
-set splitright
+set nocompatible
+
+" Directories
 " set dir=c:\\NoSave\tmp
 set dir=/tmp
+set undofile
+set undodir=~/.undo
+
 execute pathogen#infect()
+
 syntax on
 colorscheme koehler
-set nocompatible
 set visualbell
 
-set backspace=indent,start
+set backspace=indent,eol,start
 
 " both go together for intended effect
 set ignorecase
@@ -16,24 +21,36 @@ set smartcase
 
 " line wrapping
 set nowrap
-set listchars+=precedes:<,extends:>
+set list listchars+=precedes:<,extends:>,trail:ø
 
 " indentation
 set ts=4
 set sw=4
+set noexpandtab
+set softtabstop=4
+set autoindent
+set nosmarttab
+
+filetype plugin indent on
 
 " search
 set incsearch
 
 set hidden
 
+" Where to place new splits
+set splitbelow
+set splitright
+
 set updatetime=10000
 set number
 set ruler
 
-" misc filetypes
+" misc autocmd
 au BufRead,BufNewFile *.json setfiletype json
 au BufRead,BufNewFile *.md setfiletype markdown
+au BufEnter * lchdir %:p:h
+
 augroup markdown
 au!
 au FileType *markdown*
