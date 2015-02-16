@@ -21,7 +21,7 @@ set smartcase
 
 " line wrapping
 set nowrap
-set list listchars+=precedes:<,extends:>,trail:ø
+set listchars+=precedes:<,extends:>,trail:ø
 
 " indentation
 set ts=4
