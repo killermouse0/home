@@ -1,10 +1,15 @@
 set nocompatible
 
 " Directories
-" set dir=c:\\NoSave\tmp
-set dir=/tmp
-set undofile
-set undodir=~/.undo
+" See :help feature-list
+if has('win32')
+	set dir=c:\\NoSave\tmp
+	set undodir=c:\\NoSave\tmp\vim-undo
+elseif has('unix')
+	set dir=/tmp
+	set undofile
+	set undodir=~/.undo
+end
 
 execute pathogen#infect()
 
@@ -14,6 +19,9 @@ set visualbell
 
 set backspace=indent,eol,start
 
+" set listchars+=precedes:<,extends:>,trail:ø
+set listchars+=precedes:<,extends:>,trail:�
+
 " both go together for intended effect
 set ignorecase
 set smartcase
@@ -21,7 +29,6 @@ set smartcase
 
 " line wrapping
 set nowrap
-set listchars+=precedes:<,extends:>,trail:ø
 
 " indentation
 set ts=4
