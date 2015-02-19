@@ -75,6 +75,7 @@ augroup END
 let mapleader=","
 nnoremap <F9> :make<CR>
 nnoremap <Leader>r {V}gq
+nnoremap <space> :noh<CR>
 
 " FuzzyFinder
 nnoremap <silent> <leader>f :FufFile doci:<CR>
