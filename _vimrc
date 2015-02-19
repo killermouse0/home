@@ -68,9 +68,9 @@ au FileType *markdown*
 	\ commentstring=<!--%s-->
 	\ spell |
 	\ nnoremap <F10> :! %:p:r.html<CR>
+au CursorHoldI,CursorHold * update
 augroup END
 
-au CursorHoldI,CursorHold * update
 
 let mapleader=","
 nnoremap <F9> :make<CR>
