@@ -42,6 +42,7 @@ filetype plugin indent on
 
 " search
 set incsearch
+set hlsearch
 
 set hidden
 
@@ -67,8 +68,8 @@ au FileType *markdown*
 	\ foldmethod=marker
 	\ commentstring=<!--%s-->
 	\ spell |
-	\ nnoremap <F10> :! %:p:r.html<CR>
-au CursorHoldI,CursorHold * update
+	\ nnoremap <F10> :! %:p:r.html<CR> |
+	\ au CursorHoldI,CursorHold * update
 augroup END
 
 let mapleader=","
