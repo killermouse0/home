@@ -71,7 +71,6 @@ au FileType *markdown*
 au CursorHoldI,CursorHold * update
 augroup END
 
-
 let mapleader=","
 nnoremap <F9> :make<CR>
 nnoremap <Leader>r {V}gq
