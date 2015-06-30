@@ -57,7 +57,7 @@ set ruler
 
 " misc autocmd
 au BufRead,BufNewFile *.json setfiletype json
-au BufRead,BufNewFile *.md setfiletype markdown
+au BufRead,BufNewFile *.md set ft=cra.markdown
 au BufEnter * lchdir %:p:h
 
 augroup markdown
@@ -74,8 +74,9 @@ au FileType *markdown*
 augroup END
 
 let mapleader=","
-nnoremap <F9> :make<CR>
 nnoremap <Leader>r {V}gq
+nnoremap <F9> :make<CR>
+nnoremap <Space> :noh<CR>
 
 " FuzzyFinder
 nnoremap <silent> <leader>f :FufFile doci:<CR>
