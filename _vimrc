@@ -17,6 +17,7 @@ syntax on
 colorscheme koehler
 set visualbell
 set cursorline
+hi CursorLine gui=underline guibg=black
 
 set backspace=indent,eol,start
 
