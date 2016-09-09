@@ -33,10 +33,10 @@ set smartcase
 set nowrap
 
 " indentation
-set ts=4
-set sw=4
-set noexpandtab
+set tabstop=4
+set shiftwidth=4
 set softtabstop=4
+set noexpandtab
 set autoindent
 set nosmarttab
 
@@ -87,3 +87,6 @@ let g:fuf_abbrevMap = { "^doci:" : [ "~/Documents/DocsInternes/**/", ], }
 let g:rainbow_active = 1
 
 com! DeleteFile call delete(expand('%')) | bd!
+
+set colorcolumn=80
+highlight ColorColumn ctermbg=grey
