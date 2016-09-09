@@ -89,4 +89,4 @@ let g:rainbow_active = 1
 com! DeleteFile call delete(expand('%')) | bd!
 
 set colorcolumn=80
-highlight ColorColumn ctermbg=grey
+highlight ColorColumn ctermfg=red ctermbg=black
