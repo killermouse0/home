@@ -1,4 +1,4 @@
-" MIT License. Copyright (c) 2013-2015 Bailey Ling.
+" MIT License. Copyright (c) 2013-2016 Bailey Ling.
 " vim: et ts=2 sts=2 sw=2
 
 function! airline#extensions#tabline#formatters#unique_tail#format(bufnr, buffers)
@@ -10,7 +10,7 @@ function! airline#extensions#tabline#formatters#unique_tail#format(bufnr, buffer
     if empty(name)
       let map[nr] = '[No Name]'
     else
-      let tail = fnamemodify(name, ':t')
+      let tail = fnamemodify(name, ':s?/\+$??:t')
       if has_key(tails, tail)
         let duplicates[nr] = nr
       endif
@@ -23,5 +23,10 @@ function! airline#extensions#tabline#formatters#unique_tail#format(bufnr, buffer
     let map[nr] = airline#extensions#tabline#formatters#default#wrap_name(nr, fnamemodify(bufname(nr), ':p:.'))
   endfor
 
-  return map[a:bufnr]
+  if has_key(map, a:bufnr)
+    return map[a:bufnr]
+  endif
+
+  " if we get here, the buffer list isn't in sync with the selected buffer yet, fall back to the default
+  return airline#extensions#tabline#formatters#default#format(a:bufnr, a:buffers)
 endfunction
