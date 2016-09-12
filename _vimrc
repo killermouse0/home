@@ -90,3 +90,6 @@ com! DeleteFile call delete(expand('%')) | bd!
 
 set colorcolumn=80
 highlight ColorColumn ctermfg=red ctermbg=black
+
+let g:airline_theme='dark'
+set laststatus=2
