@@ -33,10 +33,10 @@ set smartcase
 set nowrap
 
 " indentation
-set ts=4
-set sw=4
-set noexpandtab
+set tabstop=4
+set shiftwidth=4
 set softtabstop=4
+set noexpandtab
 set autoindent
 set nosmarttab
 
@@ -91,3 +91,9 @@ let g:rainbow_active = 1
 com! DeleteFile call delete(expand('%')) | bd!
 
 highlight MatchParen ctermbg=6
+
+set colorcolumn=80
+highlight ColorColumn ctermfg=red ctermbg=black
+
+let g:airline_theme='dark'
+set laststatus=2
