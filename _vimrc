@@ -56,6 +56,8 @@ set updatetime=10000
 set number
 set ruler
 
+
+
 " misc autocmd
 au BufRead,BufNewFile *.json setfiletype json
 au BufRead,BufNewFile *.md set ft=cra.markdown
@@ -87,3 +89,5 @@ let g:fuf_abbrevMap = { "^doci:" : [ "~/Documents/DocsInternes/**/", ], }
 let g:rainbow_active = 1
 
 com! DeleteFile call delete(expand('%')) | bd!
+
+highlight MatchParen ctermbg=6
