@@ -5,6 +5,7 @@ set nocompatible
 if has('win32')
 	set dir=c:\\NoSave\tmp
 	set undodir=c:\\NoSave\tmp\vim-undo
+	set guifont=Lucida_Console:h10:cANSI:qDRAFT
 elseif has('unix')
 	set dir=/tmp
 	set undofile
