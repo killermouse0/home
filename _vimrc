@@ -12,8 +12,6 @@ elseif has('unix')
 	set undodir=~/.undo
 end
 
-execute pathogen#infect()
-
 syntax on
 colorscheme koehler
 set visualbell
@@ -97,3 +95,11 @@ highlight ColorColumn ctermfg=red ctermbg=black
 
 let g:airline_theme='dark'
 set laststatus=2
+
+execute pathogen#infect()
+
+let g:tmux_navigator_no_mappings = 1
+nnoremap <C-Down> :TmuxNavigateDown<cr>
+nnoremap <C-Up> :TmuxNavigateUp<cr>
+nnoremap <C-Right> :TmuxNavigateRight<cr>
+nnoremap <C-Left> :TmuxNavigateLeft<cr>
