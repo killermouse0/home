@@ -1,0 +1,31 @@
+export TERM="xterm-256color" 
+
+# Lines configured by zsh-newuser-install
+HISTFILE=~/.histfile
+HISTSIZE=1000
+SAVEHIST=1000
+bindkey -v
+# End of lines configured by zsh-newuser-install
+# The following lines were added by compinstall
+zstyle :compinstall filename '/home/s.kattoor/.zshrc'
+
+autoload -Uz compinit
+compinit
+# End of lines added by compinstall
+
+source ~/antigen.zsh
+POWERLEVEL9K_INSTALLATION_PATH=$ANTIGEN_BUNDLES/bhilburn/powerlevel9k
+antigen theme bhilburn/powerlevel9k powerlevel9k
+antigen apply
+
+
+alias proxy="ssh -D '*:19999' dedibox"
+
+# tabtab source for electron-forge package
+# uninstall by removing these lines or running `tabtab uninstall electron-forge`
+[[ -f /home/s.kattoor/ganache/node_modules/tabtab/.completions/electron-forge.zsh ]] && . /home/s.kattoor/ganache/node_modules/tabtab/.completions/electron-forge.zsh
+
+# JAVA
+
+export JAVA_HOME=/opt/java
+export PATH=${JAVA_HOME}/bin:${PATH}
