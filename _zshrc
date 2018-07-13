@@ -25,7 +25,10 @@ alias proxy="ssh -D '*:19999' dedibox"
 # uninstall by removing these lines or running `tabtab uninstall electron-forge`
 [[ -f /home/s.kattoor/ganache/node_modules/tabtab/.completions/electron-forge.zsh ]] && . /home/s.kattoor/ganache/node_modules/tabtab/.completions/electron-forge.zsh
 
-# JAVA
+[ -f ~/.zshrc.local ] && source ~/.zshrc.local
 
-export JAVA_HOME=/opt/java
-export PATH=${JAVA_HOME}/bin:${PATH}
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/home/s.kattoor/google-cloud-sdk/path.zsh.inc' ]; then source '/home/s.kattoor/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/home/s.kattoor/google-cloud-sdk/completion.zsh.inc' ]; then source '/home/s.kattoor/google-cloud-sdk/completion.zsh.inc'; fi
