@@ -99,7 +99,7 @@ set laststatus=2
 execute pathogen#infect()
 
 let g:tmux_navigator_no_mappings = 1
-nnoremap <C-Down> :TmuxNavigateDown<cr>
-nnoremap <C-Up> :TmuxNavigateUp<cr>
-nnoremap <C-Right> :TmuxNavigateRight<cr>
-nnoremap <C-Left> :TmuxNavigateLeft<cr>
+nnoremap <silent> <C-Down> :TmuxNavigateDown<cr>
+nnoremap <silent> <C-Up> :TmuxNavigateUp<cr>
+nnoremap <silent> <C-Right> :TmuxNavigateRight<cr>
+nnoremap <silent> <C-Left> :TmuxNavigateLeft<cr>
