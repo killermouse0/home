@@ -54,12 +54,14 @@ set updatetime=10000
 set number
 set ruler
 
-
+" file completion & search
+set path+=**
+set wildmenu
 
 " misc autocmd
 au BufRead,BufNewFile *.json setfiletype json
 au BufRead,BufNewFile *.md set ft=cra.markdown
-au BufEnter * lchdir %:p:h
+" au BufEnter * lchdir %:p:h
 
 augroup markdown
 au!
